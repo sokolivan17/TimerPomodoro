@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B5A03CE128353D5400A1283F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A03CE028353D5400A1283F /* AppDelegate.swift */; };
 		B5A03CE328353D5400A1283F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A03CE228353D5400A1283F /* SceneDelegate.swift */; };
-		B5A03CE528353D5400A1283F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A03CE428353D5400A1283F /* ViewController.swift */; };
+		B5A03CE528353D5400A1283F /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A03CE428353D5400A1283F /* TimerView.swift */; };
 		B5A03CE828353D5400A1283F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A03CE628353D5400A1283F /* Main.storyboard */; };
 		B5A03CEA28353D5600A1283F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A03CE928353D5600A1283F /* Assets.xcassets */; };
 		B5A03CED28353D5600A1283F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A03CEB28353D5600A1283F /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		B5A03CDD28353D5400A1283F /* TimerPomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerPomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A03CE028353D5400A1283F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5A03CE228353D5400A1283F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B5A03CE428353D5400A1283F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5A03CE428353D5400A1283F /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		B5A03CE728353D5400A1283F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5A03CE928353D5600A1283F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5A03CEC28353D5600A1283F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,63 @@
 		B5A03CDF28353D5400A1283F /* TimerPomodoro */ = {
 			isa = PBXGroup;
 			children = (
-				B5A03CE028353D5400A1283F /* AppDelegate.swift */,
-				B5A03CE228353D5400A1283F /* SceneDelegate.swift */,
-				B5A03CE428353D5400A1283F /* ViewController.swift */,
-				B5A03CE628353D5400A1283F /* Main.storyboard */,
+				B5A03CF528355EBB00A1283F /* Resources */,
+				B5A03CF428355EAA00A1283F /* Sources */,
 				B5A03CE928353D5600A1283F /* Assets.xcassets */,
-				B5A03CEB28353D5600A1283F /* LaunchScreen.storyboard */,
 				B5A03CEE28353D5600A1283F /* Info.plist */,
 			);
 			path = TimerPomodoro;
+			sourceTree = "<group>";
+		};
+		B5A03CF428355EAA00A1283F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B5A03CF728355EDD00A1283F /* App */,
+				B5A03CF628355ED600A1283F /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B5A03CF528355EBB00A1283F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5A03CF928355EF200A1283F /* Configs */,
+				B5A03CF828355EE800A1283F /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5A03CF628355ED600A1283F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B5A03CE428353D5400A1283F /* TimerView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B5A03CF728355EDD00A1283F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B5A03CE228353D5400A1283F /* SceneDelegate.swift */,
+				B5A03CE028353D5400A1283F /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B5A03CF828355EE800A1283F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B5A03CE628353D5400A1283F /* Main.storyboard */,
+				B5A03CEB28353D5600A1283F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B5A03CF928355EF200A1283F /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5A03CE528353D5400A1283F /* ViewController.swift in Sources */,
+				B5A03CE528353D5400A1283F /* TimerView.swift in Sources */,
 				B5A03CE128353D5400A1283F /* AppDelegate.swift in Sources */,
 				B5A03CE328353D5400A1283F /* SceneDelegate.swift in Sources */,
 			);
