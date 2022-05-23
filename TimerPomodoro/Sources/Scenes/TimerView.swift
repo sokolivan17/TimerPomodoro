@@ -69,11 +69,11 @@ class TimerView: UIViewController {
     private func setupLayout() {
         labelTimer.translatesAutoresizingMaskIntoConstraints = false
         labelTimer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        labelTimer.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30).isActive = true
+        labelTimer.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: Metric.labelYAnchor).isActive = true
 
         button.translatesAutoresizingMaskIntoConstraints = false
         button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 80).isActive = true
+        button.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: Metric.buttonYAnchor).isActive = true
 
     }
 
@@ -124,10 +124,12 @@ extension TimerView {
         static let relaxTimeValue = 5
         static let minutes = workTimeValue / 60 % 60
         static let seconds = workTimeValue % 60
+        static let labelYAnchor: CGFloat = -30
+        static let buttonYAnchor: CGFloat = 80
     }
 
     enum Color {
-        static let workState = UIColor.black
-        static let relaxState = UIColor.white
+        static let workState = UIColor.systemRed
+        static let relaxState = UIColor.systemBlue
     }
 }
